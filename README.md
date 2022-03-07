@@ -1,4 +1,4 @@
 # react-todo
 
 RESTful todo app with PostgresQL backend and React frontend
-![image](https://user-images.githubusercontent.com/8944418/156866308-fffe14ed-feb7-43a6-93db-dee706a4b3b2.png)
+![image](https://user-images.githubusercontent.com/8944418/156958786-feb733cd-109d-4458-8acf-eb328a6983f3.png)
