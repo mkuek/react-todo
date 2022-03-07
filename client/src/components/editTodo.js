@@ -25,7 +25,7 @@ const EditTodo = ({ todo }) => {
     <Fragment>
       <button
         type="button"
-        class="btn btn-info"
+        className="btn btn-info"
         data-bs-toggle="modal"
         data-bs-target={`#todo-${todo.todo_id}`}
       >
@@ -33,28 +33,28 @@ const EditTodo = ({ todo }) => {
       </button>
 
       <div
-        class="modal fade"
+        className="modal fade"
         id={`todo-${todo.todo_id}`}
-        tabindex="-1"
+        tabIndex="-1"
         aria-labelledby="exampleModalLabel"
         aria-hidden="true"
         onClick={() => setDescription(todo.description)}
       >
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalLabel">
+        <div className="modal-dialog">
+          <div className="modal-content">
+            <div className="modal-header">
+              <h5 className="modal-title" id="exampleModalLabel">
                 Edit Todo
               </h5>
               <button
                 type="button"
-                class="btn-close"
+                className="btn-close"
                 data-bs-dismiss="modal"
                 aria-label="Close"
                 onClick={() => setDescription(todo.description)}
               ></button>
             </div>
-            <div class="modal-body">
+            <div className="modal-body">
               <input
                 type="text"
                 className="form-control"
@@ -62,10 +62,10 @@ const EditTodo = ({ todo }) => {
                 onChange={(e) => setDescription(e.target.value)}
               />
             </div>
-            <div class="modal-footer">
+            <div className="modal-footer">
               <button
                 type="button"
-                class="btn btn-secondary"
+                className="btn btn-secondary"
                 data-bs-dismiss="modal"
                 onClick={() => setDescription(todo.description)}
               >
@@ -73,7 +73,7 @@ const EditTodo = ({ todo }) => {
               </button>
               <button
                 type="button"
-                class="btn btn-info"
+                className="btn btn-info"
                 onClick={(e) => editTodos(e)}
               >
                 Save changes

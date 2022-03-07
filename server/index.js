@@ -33,6 +33,21 @@ app.get("/todos", async (req, res) => {
   }
 });
 
+app.put("/todos/:id/complete", async (req, res) => {
+  try {
+    const id = req.params.id;
+    const { is_completed } = req.body;
+    console.log(is_completed);
+    const allTodos = await pool.query(
+      "UPDATE todo SET is_completed = $1 WHERE todo_id=$2",
+      [is_completed, id]
+    );
+    res.json("Todo was updated");
+  } catch (error) {
+    console.log(error.message);
+  }
+});
+
 app.get("/todos/:id", async (req, res) => {
   try {
     const id = req.params.id;
